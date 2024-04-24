@@ -4,6 +4,7 @@ import Trending from "../pages/trending/Trending";
 import Movies from "../pages/movies/Movies";
 import TVPage from "../pages/tv/TV";
 import Watchlist from "../pages/watchlist/Watchlist";
+import OneMovie from "../pages/oneMovie/OneMovie";
 
 export const router = createBrowserRouter([
   {
@@ -13,23 +14,26 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Trending />,
-        children: [
-          {
-            path: "one",
-          },
-        ],
       },
       {
-        path: "movie",
+        path: "/movie",
         element: <Movies />,
       },
       {
-        path: "tv",
+        path: "/tv",
         element: <TVPage />,
       },
       {
-        path: "watchlist",
+        path: "/watchlist",
         element: <Watchlist />,
+      },
+      {
+        path: "/one",
+        element: <OneMovie />,
+      },
+      {
+        path: "*",
+        element: <h1>NoT found</h1>,
       },
     ],
   },

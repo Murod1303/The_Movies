@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
 import { Flex } from "antd";
 import { BookmarkIcon } from "../../../public/icons/Icons";
+import { useNavigate } from "react-router-dom";
 const TrendingCard = ({ item }) => {
+  const navigate = useNavigate();
   return (
     <div
+      onClick={() => navigate("/one")}
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(https://image.tmdb.org/t/p/w500/${item?.backdrop_path})`,
       }}

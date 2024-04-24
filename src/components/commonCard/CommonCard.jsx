@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
 import { Flex } from "antd";
 import { BookmarkIcon } from "../../../public/icons/Icons";
+import { useNavigate } from "react-router-dom";
 const CommonCard = ({ item }) => {
+  const navigate = useNavigate();
   return (
     <div className="">
       <div
+        onClick={() => navigate("/one")}
         style={{
           width: 270,
           height: 310,

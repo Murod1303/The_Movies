@@ -45,7 +45,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
                 <li className="nav__item">
-                  <NavLink to={"movie"}>
+                  <NavLink to={"/movie"}>
                     {({ isActive }) => {
                       return (
                         <MovieIcon
@@ -57,7 +57,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
                 <li className="nav__item">
-                  <NavLink to={"tv"}>
+                  <NavLink to={"/tv"}>
                     {({ isActive }) => {
                       return (
                         <TVIcon
@@ -69,7 +69,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
                 <li className="nav__item">
-                  <NavLink to={"watchlist"}>
+                  <NavLink to={"/watchlist"}>
                     {({ isActive }) => {
                       return (
                         <WatchlistIcon
