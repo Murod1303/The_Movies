@@ -13,17 +13,22 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Trending />,
+        children: [
+          {
+            path: "one",
+          },
+        ],
       },
       {
-        path: "/movie",
+        path: "movie",
         element: <Movies />,
       },
       {
-        path: "/tv",
+        path: "tv",
         element: <TVPage />,
       },
       {
-        path: "/watchlist",
+        path: "watchlist",
         element: <Watchlist />,
       },
     ],

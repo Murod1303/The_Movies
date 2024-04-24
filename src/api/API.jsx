@@ -14,4 +14,6 @@ export const AdditionApi = {
     `discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc`,
   Tv: (page) =>
     `discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&page=${page}&sort_by=popularity.desc`,
+  OneMovie: (id) => `movie/movie_${id}?language=en-US`,
+  OneTv: (id) => `tv/series_${id}?language=en-US`,
 };

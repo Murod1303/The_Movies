@@ -7,7 +7,7 @@ const TrendingCard = ({ item }) => {
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(https://image.tmdb.org/t/p/w500/${item?.backdrop_path})`,
       }}
-      className="ForLinearGradent w-full h-[200px] p-6 flex items-start justify-end flex-col relative"
+      className="ForLinearGradent w-full h-[200px] p-6 flex items-start justify-end flex-col relative "
     >
       <span className="bg-[#10141e9f] w-8 h-8 flex items-center justify-center rounded-full absolute right-3 top-3">
         <BookmarkIcon />
