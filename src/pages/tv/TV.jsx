@@ -41,7 +41,7 @@ const TVPage = () => {
         <ReactPaginate
           containerClassName={"pagination"}
           pageClassName={"page-item"}
-          activeClassName={"active"}
+          activeClassName={"activeClas"}
           breakLabel="..."
           nextLabel={<MdOutlineNavigateNext />}
           onPageChange={handlePageClick}
