@@ -37,3 +37,55 @@ body {
 .LogoSVG:hover {
   border-bottom-color: transparent;
 }
+
+.pagination {
+  list-style: none;
+  height: 31.5px;
+  width: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #1e50ff;
+  border-radius: 50%;
+}
+
+.page-item {
+  list-style: none;
+  padding: 2px 12px;
+  height: 31.5px;
+  width: 31.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+}
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 100%;
+}
+.previous {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 100%;
+}
+.linkPage {
+  color: #fff;
+}
+.disabledButton {
+  opacity: 0.4;
+}

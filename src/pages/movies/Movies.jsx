@@ -6,16 +6,19 @@ import { TrendingContext } from "../../context/Context";
 import { API_KEY, AdditionApi, instanse } from "../../api/API";
 import { useQuery } from "@tanstack/react-query";
 import ReactPaginate from "react-paginate";
-
+import { MdOutlineNavigateNext } from "react-icons/md";
+import { GrFormPrevious } from "react-icons/gr";
 const Movies = () => {
   const { movies, setMovies } = useContext(TrendingContext);
   const [page, setPage] = useState(1);
-  const handlePageClick = (e) => {
-    console.log(e);
+  const handlePageClick = (event) => {
+    console.log(event.selected + 1);
+    setPage(event.selected + 1);
   };
   const getMovies = async () => {
     const response = await instanse.get(AdditionApi.Movies(page) + API_KEY);
     setMovies(response);
+    console.log(response);
     return response;
   };
   const { data, isLoading, isError, error } = useQuery({
@@ -23,8 +26,6 @@ const Movies = () => {
     queryFn: getMovies,
   });
   const moviesData = movies?.data?.results;
-  const pageCount = movies?.data?.page;
-  console.log(movies);
   return (
     <section>
       <Flex align="start" vertical>
@@ -38,13 +39,18 @@ const Movies = () => {
             })}
         </Flex>
         <ReactPaginate
+          containerClassName={"pagination"}
+          pageClassName={"page-item"}
+          activeClassName={"active"}
           breakLabel="..."
-          nextLabel=">"
-          onPageChange={() => handlePageClick()}
+          nextLabel={<MdOutlineNavigateNext />}
+          onPageChange={handlePageClick}
           pageRangeDisplayed={3}
-          pageCount={pageCount || 0}
-          previousLabel=">"
+          pageCount={10}
+          previousLabel={<GrFormPrevious />}
           renderOnZeroPageCount={null}
+          pageLinkClassName={"linkPage"}
+          disabledClassName={"disabledButton"}
         />
       </Flex>
     </section>
